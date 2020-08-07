@@ -20,14 +20,12 @@ export default function App() {
       <View style={styles.hbox}>
         <AppButton
           title="-5"
-          color="#2196f3"
           onPress={() => {
             changeCounter(-5);
           }}
         />
         <AppButton
           title="-1"
-          color="#2196f3"
           onPress={() => {
             changeCounter(-1);
           }}
@@ -61,8 +59,16 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     paddingTop: Constants.statusBarHeight,
-    // backgroundColor: "#ecf0f1",
+    backgroundColor: "#ecf0f1",
     padding: 8,
+  },
+  appButtonContainer: {
+    elevation: 8,
+    marginLeft: 16,
+    marginRight: 16,
+    backgroundColor: "#2196f3",
+    padding: 4,
+    height: 30,
   },
   hbox: {
     flex: 1,
@@ -76,7 +82,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   value: {
-    margin: 24,
+    margin: 36,
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
@@ -86,15 +92,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
-    color: "red",
-  },
-  appButtonContainer: {
-    elevation: 8,
-    backgroundColor: "#2196f3",
-    marginLeft: 16,
-    marginRight: 16,
-  },
-  appButtonText: {
     color: "red",
   },
 });
